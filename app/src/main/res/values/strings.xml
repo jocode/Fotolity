@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Fotolity</string>
+
+    <string name="username">Nombre de Usuario</string>
 </resources>
