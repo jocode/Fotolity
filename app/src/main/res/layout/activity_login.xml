@@ -1,76 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:fitsSystemWindows="true"
     tools:context="com.example.fotolity.LoginActivity"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    >
+
 
     <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="551dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="1"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:ignore="MissingConstraints">
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.6">
+            android:layout_weight="0.6"
+            >
 
             <ImageView
                 android:id="@+id/logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:src="@mipmap/ic_launcher"
-                android:contentDescription=""
-                tools:ignore="ContentDescription" />
+                android:background="@mipmap/ic_launcher_round"
+                />
 
         </RelativeLayout>
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.4"
             android:fillViewport="true"
-            android:layout_weight="0.4">
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:padding="@dimen/padding_horizontal_login">
+                android:padding="@dimen/padding_horizontal_login"
+                >
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/EditTextWhite">
+                    android:theme="@style/EditTextWhite"
+                    >
 
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/username"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/username"
-                        android:inputType="textAutoComplete"/>
+                        android:hint="@string/hint_username"
+
+
+                        />
 
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/EditTextWhite">
+                    android:theme="@style/EditTextWhite"
+                    >
 
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/password"
-                        android:inputType="textPassword"/>
+                        android:hint="@string/hint_password"
+                        android:inputType="textPassword"
+                        />
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -78,43 +85,49 @@
                     android:id="@+id/login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/RaisedButtonDark"
                     android:text="@string/text_button_login"
-                    android:layout_marginTop="@dimen/margin_default"/>
+                    android:theme="@style/RaisedButtonDark"
+                    android:onClick="goHome"
+                    android:layout_marginTop="@dimen/margin_default"
+                    />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center">
+                    android:gravity="center"
+                    >
 
                     <TextView
-                        android:id="@+id/dontHaceAccount"
+                        android:id="@+id/dontHaveAccount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/dont_have_account"
                         android:textColor="@android:color/white"
                         android:textStyle="bold"
                         android:textSize="@dimen/textsize_donthaveaccount"
-                        android:layout_marginRight="5dp"/>
+                        />
 
                     <TextView
                         android:id="@+id/createHere"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/create_here"
-                        android:textSize="@dimen/textsize_donthaveaccount"
-                        android:textStyle="bold"
                         android:textColor="@android:color/white"
-                        android:layout_toRightOf="@+id/dontHaceAccount"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/textsize_donthaveaccount"
+                        android:layout_toRightOf="@+id/dontHaveAccount"
                         android:onClick="goCreateAccount"
                         />
+
 
                 </RelativeLayout>
 
             </LinearLayout>
 
+
         </ScrollView>
 
-    </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
