@@ -16,7 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.CreateAccountActivity" />
+        <activity android:name=".views.CreateAccountActivity"
+            android:parentActivityName=".LoginActivity">
+            <!--Soporte para versions inferiores a Android Lollipop-->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginActivity"/>
+        </activity>
     </application>
 
 </manifest>

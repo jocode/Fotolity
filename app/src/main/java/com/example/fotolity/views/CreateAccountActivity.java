@@ -14,7 +14,7 @@ public class CreateAccountActivity extends AppCompatActivity {
         setContentView(R.layout.activity_create_account);
 
         // Obtenemos el nombre del Toolbar parala vista
-        showToolbar(getResources().getString(R.string.toolbar_title_createaccount), false);
+        showToolbar(getResources().getString(R.string.toolbar_title_createaccount), true);
 
     }
 
@@ -26,6 +26,7 @@ public class CreateAccountActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(title);
+        // Habilitamos el botón de Up en el Toolbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
     }
 
