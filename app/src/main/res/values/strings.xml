@@ -2,4 +2,6 @@
     <string name="app_name">Fotolity</string>
 
     <string name="username">Nombre de Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="text_button_login">Login</string>
 </resources>
