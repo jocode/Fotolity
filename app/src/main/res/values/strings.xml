@@ -20,4 +20,10 @@
     <string name="timecard_card">4 dias</string>
     <string name="likenumbercard_card">10 me Gusta</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="item_search">Buscar</string>
+    <string name="item_home">Inicio</string>
+    <string name="item_profile">Mi Perfil</string>
+
 </resources>

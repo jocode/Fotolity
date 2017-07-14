@@ -22,11 +22,13 @@
             android:name=".views.CreateAccountActivity"
             android:parentActivityName=".LoginActivity"
             android:windowSoftInputMode="stateHidden">
-            <!--Soporte para versions inferiores a Android Lollipop-->
+
+            <!-- Soporte para versions inferiores a Android Lollipop -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".LoginActivity"/>
+                android:value=".LoginActivity" />
         </activity>
+        <activity android:name=".views.ContainerActivity"></activity>
     </application>
 
 </manifest>

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.fotolity.views.ContainerActivity;
 import com.example.fotolity.views.CreateAccountActivity;
 
  public class LoginActivity extends AppCompatActivity {
@@ -16,7 +17,9 @@ import com.example.fotolity.views.CreateAccountActivity;
     }
 
     public void goHome(View view){
-
+        Intent intent = new Intent(this, ContainerActivity.class);
+        startActivity(intent);
+        LoginActivity.this.finish();
     }
 
     public void goCreateAccount(View view){
