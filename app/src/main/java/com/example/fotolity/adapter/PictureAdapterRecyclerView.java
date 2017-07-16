@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.fotolity.R;
 import com.example.fotolity.model.Picture;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -40,6 +41,9 @@ public class PictureAdapterRecyclerView extends RecyclerView.Adapter<PictureAdap
         holder.userNameCard.setText(picture.getUserName());
         holder.timeCard.setText(picture.getTime());
         holder.likeNumberCard.setText(picture.getLikeNumber());
+
+        Picasso.with(activity).load(picture.getPicture())
+                .into(holder.pictureCard);
     }
 
     @Override

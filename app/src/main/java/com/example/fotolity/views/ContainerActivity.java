@@ -2,6 +2,7 @@ package com.example.fotolity.views;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,7 +24,6 @@ public class ContainerActivity extends AppCompatActivity {
          * Implementamos la Barra de navegación inferior
          */
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setSelectedItemId(R.id.home);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
@@ -32,31 +32,35 @@ public class ContainerActivity extends AppCompatActivity {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Fragment fragment = new HomeFragment();
             switch (item.getItemId()) {
                 case R.id.search:
-                    SearchFragment searchFragment = new SearchFragment();
-                    getSupportFragmentManager().beginTransaction().
-                            replace(R.id.container, searchFragment)
-                            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+                    fragment = new SearchFragment();
+                    replaceFragment(fragment);
                     return true;
 
                 case R.id.home:
-                    HomeFragment homeFragment = new HomeFragment();
-                    getSupportFragmentManager().beginTransaction().
-                            replace(R.id.container, homeFragment)
-                            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+                    fragment = new HomeFragment();
+                    replaceFragment(fragment);
                     return true;
 
                 case R.id.profile:
-                    ProfileFragment profileFragment = new ProfileFragment();
-                    getSupportFragmentManager().beginTransaction().
-                            replace(R.id.container, profileFragment)
-                            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+                    fragment = new ProfileFragment();
+                    replaceFragment(fragment);
                     return true;
+                default:
+                    replaceFragment(fragment);
+                    break;
             }
             return false;
         }
 
     };
+
+    public void replaceFragment(Fragment  fragment){
+        getSupportFragmentManager().beginTransaction().
+                replace(R.id.container, fragment)
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+    }
 
 }
