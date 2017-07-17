@@ -1,7 +1,8 @@
-<android.support.design.widget.CoordinatorLayout
-    android:layout_width="match_parent"
+<android.support.design.widget.CoordinatorLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:fitsSystemWindows="true">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.fotolity.views.fragment.ProfileFragment">
 
 </android.support.design.widget.CoordinatorLayout>

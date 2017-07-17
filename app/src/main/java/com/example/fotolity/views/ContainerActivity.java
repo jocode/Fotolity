@@ -20,6 +20,9 @@ public class ContainerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_container);
 
+
+        replaceFragment(new HomeFragment());
+
         /**
          * Implementamos la Barra de navegación inferior
          */
