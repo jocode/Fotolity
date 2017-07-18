@@ -30,7 +30,7 @@
                 android:background="@drawable/indice"
                 app:layout_collapseMode="parallax"
                 android:fitsSystemWindows="true"
-                />
+                android:transitionName="@string/transitionname_picture"/>
 
 
             <android.support.v7.widget.Toolbar
